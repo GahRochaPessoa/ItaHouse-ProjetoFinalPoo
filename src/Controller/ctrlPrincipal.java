@@ -10,7 +10,6 @@ import View.ViewCadastraImovel;
 import View.ViewMostraPessoas;
 import View.ViewMostraImoveis;
 import View.ViewCadastraCorretor;
-import View.ViewSaida;
 import View.ViewMostraEventos;
 import View.ViewFaturamento;
 import View.ViewMostraVisitas;
@@ -45,16 +44,12 @@ public class ctrlPrincipal {
 
     }
 
-    public void salvaSessao() throws Exception {
+    public void salvar() throws Exception {
         objCtrComprador.serializa();
         objCtrCorretor.serializa();
         objCtrVendedor.serializa();
-        objCtrImovel.gravaImovel();
-        objCtrVenda.gravaVendas();
-    }
-
-    public void saida() {
-        new ViewSaida(this);
+        objCtrImovel.serializa();
+        objCtrVenda.serializa();
     }
 
     public void cadVendedor() {

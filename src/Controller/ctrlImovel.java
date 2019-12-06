@@ -14,10 +14,9 @@ public class ctrlImovel {
 
     private ArrayList<Imovel> listaImovel = new ArrayList();
     private ArrayList<Proposta> listaProposta = new ArrayList();
-    private final String arquivo = "Imoveis.dat";
 
     public ctrlImovel() throws Exception {
-        recuperaImovel();
+        desserializa();
     }
 
     public void addImovel(int codigo, String tipo, String descricao, String foto, double preco, double comissao, Calendar dataInclusao, Vendedor vendedor) {
@@ -55,18 +54,18 @@ public class ctrlImovel {
         return (new ArrayList<Imovel>());   
     }*/
 
-    public void gravaImovel() throws Exception {
-        FileOutputStream objFileOS = new FileOutputStream(arquivo);
+    public void serializa() throws Exception {
+        FileOutputStream objFileOS = new FileOutputStream("Imoveis.dat");
         ObjectOutputStream objOS = new ObjectOutputStream(objFileOS);
         objOS.writeObject(listaImovel);
         objOS.flush();
         objOS.close();
     }
 
-    public void recuperaImovel() throws Exception {
-        File objFile = new File(arquivo);
+    public void desserializa() throws Exception {
+        File objFile = new File("Imoveis.dat");
         if (objFile.exists()) {
-            FileInputStream objFileIS = new FileInputStream(arquivo);
+            FileInputStream objFileIS = new FileInputStream("Imoveis.dat");
             ObjectInputStream objIS = new ObjectInputStream(objFileIS);
             listaImovel = (ArrayList<Imovel>) objIS.readObject();
             objIS.close();
