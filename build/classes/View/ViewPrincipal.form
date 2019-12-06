@@ -11,9 +11,9 @@
             <Property name="text" type="java.lang.String" value="Pessoas"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="Vendedor">
+            <Menu class="javax.swing.JMenu" name="Vendedores">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Vendedor"/>
+                <Property name="text" type="java.lang.String" value="Vendedores"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="CadVend">
@@ -28,9 +28,9 @@
             </Menu>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
             </MenuItem>
-            <Menu class="javax.swing.JMenu" name="corretor">
+            <Menu class="javax.swing.JMenu" name="corretores">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Corretor"/>
+                <Property name="text" type="java.lang.String" value="Corretores"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="CadCorretor">
@@ -45,9 +45,9 @@
             </Menu>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator2">
             </MenuItem>
-            <Menu class="javax.swing.JMenu" name="comprador">
+            <Menu class="javax.swing.JMenu" name="compradores">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Comprador"/>
+                <Property name="text" type="java.lang.String" value="Compradores"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="CadComprador">
@@ -62,47 +62,47 @@
             </Menu>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator4">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="PessoasCadastradas">
+            <MenuItem class="javax.swing.JMenuItem" name="MostrarPessoas">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Pessoas Cadastradas"/>
+                <Property name="text" type="java.lang.String" value="Mostrar Pessoas"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PessoasCadastradasActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MostrarPessoasActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="Imovel">
+        <Menu class="javax.swing.JMenu" name="Imoveis">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Im&#xf3;vel"/>
+            <Property name="text" type="java.lang.String" value="Im&#xf3;veis"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="ImovelCadastrar">
+            <MenuItem class="javax.swing.JMenuItem" name="CadImovel">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cadastrar "/>
+                <Property name="text" type="java.lang.String" value="Cadastrar Im&#xf3;vel"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ImovelCadastrarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadImovelActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator3">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="ExibirCatalogo">
+            <MenuItem class="javax.swing.JMenuItem" name="visualizarImoveis">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Exibir Cat&#xe1;logo"/>
+                <Property name="text" type="java.lang.String" value="Cat&#xe1;logo"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExibirCatalogoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="visualizarImoveisActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator5">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="exibirPropostas">
+            <MenuItem class="javax.swing.JMenuItem" name="visualizarPropostas">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Propostas"/>
+                <Property name="text" type="java.lang.String" value="Visualizar Propostas"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exibirPropostasActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="visualizarPropostasActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator9">
@@ -117,34 +117,34 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="Relatorio">
+        <Menu class="javax.swing.JMenu" name="Gerencia">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Relat&#xf3;rio"/>
+            <Property name="text" type="java.lang.String" value="Ger&#xea;ncia"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="faturamento">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Faturamento"/>
+                <Property name="text" type="java.lang.String" value="Total Faturado"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="faturamentoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator6">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="faturamentoCorretor">
+            <MenuItem class="javax.swing.JMenuItem" name="CorretorFat">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Faturamento Corretor"/>
+                <Property name="text" type="java.lang.String" value="Faturamento de Corretor"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="faturamentoCorretorActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CorretorFatActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator7">
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="visitasCorrretor">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Visitas por Corretor"/>
+                <Property name="text" type="java.lang.String" value="Visitas de Corretor"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="visitasCorrretorActionPerformed"/>
@@ -152,32 +152,32 @@
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator10">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="EventosPorImovel">
+            <MenuItem class="javax.swing.JMenuItem" name="EventosImovel">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Eventos por Im&#xf3;vel"/>
+                <Property name="text" type="java.lang.String" value="Eventos no Im&#xf3;vel"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EventosPorImovelActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EventosImovelActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator11">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="RelatorioDeVendas">
+            <MenuItem class="javax.swing.JMenuItem" name="RelatorioVendas">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Relat&#xf3;rio de Vendas"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RelatorioDeVendasActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RelatorioVendasActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator12">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="ImovelPorVendedor">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Im&#xf3;veis por Vendedor"/>
+                <Property name="text" type="java.lang.String" value="Im&#xf3;veis de um Vendedor"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ImovelPorVendedorActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -186,7 +186,7 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="0"/>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -211,7 +211,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="664" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="683" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">

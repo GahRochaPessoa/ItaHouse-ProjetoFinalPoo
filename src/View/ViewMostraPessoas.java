@@ -21,29 +21,33 @@ public class ViewMostraPessoas extends javax.swing.JFrame {
         this.objctrlComprador = ctrlComprador;
         initComponents();
         
-        String saida="";
+
+        String saida = "Vendedores cadastrados: ";
         for(Vendedor v : ctrlVendedor.getListaVendedor()){
             if(v instanceof Vendedor){
-                saida+= "Nome: " + v.getNome() + "\nTipo: Vendedor\nCPF: " + v.getCpf() + "\nEmail: "+ v.getEmail() +"   Fone: "+ v.getFone();
-            }
-        }
-            
-        for(Corretor cor : ctrlCorretor.getListaCorretor()){
-            if(cor instanceof Corretor){
-                saida+= "\n\nNome: " + cor.getNome() + "\nTipo: Corretor\nCPF: " + cor.getCpf() + "\nEmail: "+ cor.getEmail() +"   Fone: "+ cor.getFone();
+
+                saida+= "\nNome: " + v.getNome() + "\nTipo: Vendedor\nCPF: " + v.getCpf() + "\nEmail: "+ v.getEmail() +"   Fone: "+ v.getFone();
             }
         }
         
+        saida+="\n\n\nCorretores cadastrados: ";
+        for(Corretor cor : ctrlCorretor.getListaCorretor()){
+            if(cor instanceof Corretor){
+                saida+= "\nNome: " + cor.getNome() + "\nTipo: Corretor\nCPF: " + cor.getCpf() + "\nEmail: "+ cor.getEmail() +"   Fone: "+ cor.getFone();
+            }
+        }
+        
+        saida+="\n\n\nCompradores cadastrados: ";
         for(Comprador comp : ctrlComprador.getListaComprador()){
             if(comp instanceof Comprador){
-                saida+= "\n\nNome: " + comp.getNome() + "\nTipo: Comprador\nCPF: " + comp.getCpf() + "\nEmail: "+ comp.getEmail() +"   Fone: "+ comp.getFone();
+                saida+= "\nNome: " + comp.getNome() + "\nTipo: Comprador\nCPF: " + comp.getCpf() + "\nEmail: "+ comp.getEmail() +"   Fone: "+ comp.getFone();
             }
             
             saida+="\n\n";
         }
         
-        mostrarVisitas.setText(saida);
-        this.setTitle("Pessoas cadastradas");
+        jTextArea1.setText(saida);
+        this.setTitle("Cadastros");
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -59,36 +63,28 @@ public class ViewMostraPessoas extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        mostrarVisitas = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        mostrarVisitas.setColumns(20);
-        mostrarVisitas.setRows(5);
-        jScrollPane1.setViewportView(mostrarVisitas);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("Pessoas");
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -98,8 +94,7 @@ public class ViewMostraPessoas extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea mostrarVisitas;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

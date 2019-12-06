@@ -34,9 +34,8 @@ public class ViewMostraPropostas extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        resultadoImoveisPendentes = new javax.swing.JList();
+        lista = new javax.swing.JList();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Imovéis com proposta pendentes");
@@ -46,15 +45,12 @@ public class ViewMostraPropostas extends javax.swing.JFrame {
             }
         });
 
-        resultadoImoveisPendentes.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane1.setViewportView(resultadoImoveisPendentes);
+        lista.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(lista);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Imóveis com Propostas Pendentes");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText("Propostas Pendentes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,15 +61,11 @@ public class ViewMostraPropostas extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(71, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel6)
-                .addGap(9, 9, 9)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -85,7 +77,7 @@ public class ViewMostraPropostas extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         
-        resultadoImoveisPendentes.removeAll();
+        lista.removeAll();
         DefaultListModel listModel = new DefaultListModel();
         ArrayList<Imovel> array = new ArrayList();
 
@@ -102,15 +94,15 @@ public class ViewMostraPropostas extends javax.swing.JFrame {
             }
         }
 
-        resultadoImoveisPendentes.setModel(listModel);
-        resultadoImoveisPendentes.addListSelectionListener(new ListSelectionListener() {
+        lista.setModel(listModel);
+        lista.addListSelectionListener(new ListSelectionListener() {
 
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 if (e.getValueIsAdjusting()) {
-                    if (resultadoImoveisPendentes.getSelectedIndex() != -1) {
+                    if (lista.getSelectedIndex() != -1) {
                         int index = 0;
-                        index = resultadoImoveisPendentes.getSelectedIndex();
+                        index = lista.getSelectedIndex();
                         objCtr.julgaProposta(array.get(index), objCtrPrincipal.getObjCtrVenda());
                     }
 
@@ -122,8 +114,7 @@ public class ViewMostraPropostas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList resultadoImoveisPendentes;
+    private javax.swing.JList lista;
     // End of variables declaration//GEN-END:variables
 }

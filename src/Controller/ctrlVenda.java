@@ -7,15 +7,13 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class ctrlVenda {
 
     private ArrayList<ImovelProposta> listaVendas = new ArrayList();
-    private final String arquivo = "Vendas.dat";
 
     public ctrlVenda() throws Exception {
-        recuperaVendas();
+        desserializa();
     }
 
     public void addVenda(Imovel imovel, Proposta proposta) {
@@ -26,18 +24,18 @@ public class ctrlVenda {
         return listaVendas;
     }
 
-    public void gravaVendas() throws Exception {
-        FileOutputStream objFileOS = new FileOutputStream(arquivo);
+    public void serializa() throws Exception {
+        FileOutputStream objFileOS = new FileOutputStream("Vendas.dat");
         ObjectOutputStream objOS = new ObjectOutputStream(objFileOS);
         objOS.writeObject(listaVendas);
         objOS.flush();
         objOS.close();
     }
 
-    public void recuperaVendas() throws Exception {
-        File objFile = new File(arquivo);
+    public void desserializa() throws Exception {
+        File objFile = new File("Vendas.dat");
         if (objFile.exists()) {
-            FileInputStream objFileIS = new FileInputStream(arquivo);
+            FileInputStream objFileIS = new FileInputStream("Vendas.dat");
             ObjectInputStream objIS = new ObjectInputStream(objFileIS);
             listaVendas = (ArrayList<ImovelProposta>) objIS.readObject();
             objIS.close();
